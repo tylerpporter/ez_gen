@@ -1,6 +1,6 @@
 # EzGen
 
-**Quickly create a template based environment to write and test Ruby code.**
+**EzGen is a Ruby Gem to help you quickly create a template based environment to write and test Ruby code.**
 
 EzGen takes two command line arguments, *project name* and *class name*. It will then generate a git repository as *project name* and create a Ruby class template as *class name* along with a corresponding test template. Additional generated files include a Rakefile, README template, and Pull Request template.
 
