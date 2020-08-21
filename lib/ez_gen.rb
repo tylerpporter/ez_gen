@@ -1,6 +1,9 @@
 require "ez_gen/version"
 
 module EzGen
-  class Error < StandardError; end
-  # Your code goes here...
+  class Template
+    def self.generate
+      require 'ez_gen/generator.rb'
+    end
+  end
 end
