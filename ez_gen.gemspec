@@ -15,6 +15,6 @@ Gem::Specification.new do |spec|
   spec.files         = ['lib/ez_gen.rb', 'lib/ez_gen/version.rb', 'lib/ez_gen/generator.rb']
   spec.executables   = ['ez_gen']
   spec.require_paths = ["lib"]
-  spec.add_runtime_dependency('pastel', '>= 0.8.0')
-  spec.add_runtime_dependency('simplecov', '>= 0.19.0')
+  spec.add_runtime_dependency('pastel', '~> 0.8')
+  spec.add_runtime_dependency('simplecov', '~> 0.19')
 end
