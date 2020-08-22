@@ -75,29 +75,29 @@ class FileWriter
     'lower_name = ARGV.first
     upper_name = lower_name.split("_").map{|word| word.capitalize}.join
 
-    class_file = File.open("lib/#{@lower_name}.rb", "w")
-    class_file.write("class #{@upper_name}\n\nend")
+    class_file = File.open("lib/#{lower_name}.rb", "w")
+    class_file.write("class #{upper_name}\n\nend")
     class_file.close
 
-    test_file = File.open("test/#{@lower_name}_test.rb", "w")
+    test_file = File.open("test/#{lower_name}_test.rb", "w")
     test_file.write(
     "require \'./test/test_helper.rb\'
-    require \'./lib/#{@lower_name}.rb\'
+    require \'./lib/#{lower_name}.rb\'
 
-    class #{@upper_name}Test < Minitest::Test
+    class #{upper_name}Test < Minitest::Test
       def setup
-        @#{@lower_name} = #{@upper_name}.new
+        @#{lower_name} = #{upper_name}.new
       end
 
       def test_it_exists
-        assert_instance_of #{@upper_name}, @#{@lower_name}
+        assert_instance_of #{upper_name}, @#{lower_name}
       end
     end"
     )
     test_file.close
     eval File.read(test_file)
     puts ""
-    puts "Created \'lib/#{@lower_name}.rb\' and \'test/#{@lower_name}_test.rb\'"
+    puts "Created \'lib/#{lower_name}.rb\' and \'test/#{lower_name}_test.rb\'"
     puts ""
     '
     )
