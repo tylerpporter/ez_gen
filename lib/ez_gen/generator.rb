@@ -1,6 +1,6 @@
 require 'fileutils'
 require 'pastel'
-require 'file_writer'
+require_relative 'file_writer'
 
 # file/class name
 title = ARGV.first
