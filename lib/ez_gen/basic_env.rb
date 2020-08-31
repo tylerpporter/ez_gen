@@ -5,8 +5,7 @@ require_relative 'message_writer'
 class BasicEnv
   def initialize
     @title = ARGV.first
-    @writer = FileWriter.new(ARGV)
-    @test_file = ''
+    @file_writer = FileWriter.new(ARGV)
   end
 
   def generate
@@ -34,14 +33,7 @@ class BasicEnv
   end
 
   def write_template_files
-    @writer.write_rake
-    @writer.write_test_helper
-    @writer.write_class_template
-    @test_file = @writer.write_test_file
-    @writer.write_generator
-    @writer.write_readme
-    @writer.write_pr_template
-    @writer.write_gitignore
+    @file_writer.write
   end
 
   def commit_and_checkout
@@ -51,7 +43,7 @@ class BasicEnv
   end
 
   def run_test
-    eval File.read(@test_file)
+    eval File.read(@file_writer.test_file)
   end
 
   def confirmation_message
