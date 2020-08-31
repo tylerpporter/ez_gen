@@ -2,4 +2,4 @@
 
 require 'ez_gen'
 
-EzGen::Template.generate_basic_env
+EzGen::Generator.generate_basic_env
