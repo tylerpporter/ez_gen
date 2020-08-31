@@ -1,8 +1,22 @@
 class FileWriter
+  attr_reader :test_file
   def initialize(args)
     @lower_name = args.last
     @upper_name = @lower_name.split('_').map(&:capitalize).join
   end
+
+  def write
+    write_rake
+    write_test_helper
+    write_class_template
+    @test_file = write_test_file
+    write_generator
+    write_readme
+    write_pr_template
+    write_gitignore
+  end
+
+  private
 
   def write_rake
     rake = File.open("Rakefile", "w")
