@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/tylerpporter/ez_gen"
-  spec.files         = ['lib/ez_gen.rb', 'lib/ez_gen/version.rb', 'lib/ez_gen/basic_env.rb', 'lib/ez_gen/file_writer.rb', 'lib/ez_gen/message_writer.rb']
+  spec.files         = ['lib/ez_gen.rb', 'lib/ez_gen/version.rb', 'lib/ez_gen/basic_env.rb', 'lib/ez_gen/file_writer.rb', 'lib/ez_gen/message_writer.rb', 'lib/ez_gen/template.rb']
   spec.executables   = ['ez_gen']
   spec.require_paths = ["lib"]
   spec.add_runtime_dependency('pastel', '~> 0.8')
