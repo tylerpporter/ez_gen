@@ -1,6 +1,5 @@
 class FileWriter
   def initialize(args)
-    @args = args
     @lower_name = args.last
     @upper_name = @lower_name.split('_').map(&:capitalize).join
   end
