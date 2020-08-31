@@ -2,7 +2,6 @@ require 'pastel'
 
 class MessageWriter
   PASTEL = Pastel.new
-
   def initialize(title)
     @title = title
     @message = {}
@@ -10,7 +9,7 @@ class MessageWriter
 
   def write
     stylize
-    message 
+    message
   end
 
   private
