@@ -17,4 +17,5 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
   spec.add_runtime_dependency('pastel', '~> 0.8')
   spec.add_runtime_dependency('simplecov', '~> 0.19')
+  spec.add_runtime_dependency('mocha', '~> 1.11')
 end
