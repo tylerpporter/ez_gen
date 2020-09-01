@@ -9,12 +9,12 @@ class MessageWriter
 
   def write
     stylize
-    message
+    confirmation
   end
 
   private
 
-  def message
+  def confirmation
     puts "\n" * 4
     puts spacing[:spacing1] + @message[:repo] + @message[:title],""
     puts spacing[:spacing1] + @message[:branch] + @message[:dev],""
