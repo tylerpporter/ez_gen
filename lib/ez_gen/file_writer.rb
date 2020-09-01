@@ -5,13 +5,14 @@ class FileWriter
   def initialize(args)
     @lower_name = args.last
     @upper_name = @lower_name.split('_').map(&:capitalize).join
+    @test_file = nil
   end
 
   def write
     write_rake
     write_test_helper
     write_class_template
-    @test_file = write_test_file
+    write_test_file
     write_generator
     write_readme
     write_pr_template
@@ -42,7 +43,7 @@ class FileWriter
     test_file = File.open("test/#{@lower_name}_test.rb", 'w')
     test_file.write(Template.test_template(@lower_name, @upper_name))
     test_file.close
-    test_file
+    @test_file = test_file
   end
 
   def write_generator
