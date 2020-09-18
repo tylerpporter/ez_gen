@@ -43,7 +43,7 @@ class BasicEnv
   end
 
   def run_test
-    eval File.read(@file_writer.test_file)
+    require "./test/#{ARGV.last}_test.rb"
   end
 
   def confirmation_message
