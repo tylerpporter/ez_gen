@@ -4,19 +4,13 @@
 
 EzGen takes two command line arguments, *project name* and *class name*. It will then generate a git repository as *project name* and create a Ruby class template as *class name* along with a corresponding test template. Additional generated files include a Rakefile, README template, and Pull Request template.
 
+## Requirements
+
+    Ruby >= 2.5.0
+
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'ez_gen'
-```
-
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
+Install from the command line:
 
     $ gem install ez_gen
 
@@ -61,7 +55,7 @@ class ClassNameTest < Minitest::Test
   end
 end
 ```
-*EzGen writes your `initial commit` and then checks out a new branch `dev`.*
+*EzGen writes your `initial commit` on `master` and then checks out a new branch `dev`.*
 
 **After you `cd` into the new project folder, you will have access to a few `rake` commands:**
 

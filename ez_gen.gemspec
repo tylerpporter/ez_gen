@@ -12,9 +12,10 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/tylerpporter/ez_gen"
-  spec.files         = ['lib/ez_gen.rb', 'lib/ez_gen/version.rb', 'lib/ez_gen/generator.rb']
+  spec.files         = ['lib/ez_gen.rb', 'lib/ez_gen/version.rb', 'lib/ez_gen/basic_env.rb', 'lib/ez_gen/file_writer.rb', 'lib/ez_gen/message_writer.rb', 'lib/ez_gen/templatable.rb']
   spec.executables   = ['ez_gen']
   spec.require_paths = ["lib"]
   spec.add_runtime_dependency('pastel', '~> 0.8')
   spec.add_runtime_dependency('simplecov', '~> 0.19')
+  spec.add_runtime_dependency('mocha', '~> 1.11')
 end
